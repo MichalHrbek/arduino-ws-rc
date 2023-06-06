@@ -107,13 +107,13 @@ void notifyClients() {
 	
 	sensors_event_t a, g, temp;
 	mpu.getEvent(&a, &g, &temp);
-	json["a"]["x"] = a.acceleration.x;
-	json["a"]["y"] = a.acceleration.y;
-	json["a"]["z"] = a.acceleration.z;
+	json["acceleration"]["X"] = a.acceleration.x;
+	json["acceleration"]["Y"] = a.acceleration.y;
+	json["acceleration"]["Z"] = a.acceleration.z;
 	
-	json["g"]["x"] = a.gyro.x;
-	json["g"]["y"] = a.gyro.y;
-	json["g"]["z"] = a.gyro.z;
+	json["gyro"]["X"] = a.gyro.x;
+	json["gyro"]["Y"] = a.gyro.y;
+	json["gyro"]["Z"] = a.gyro.z;
 	
 	json["mpu_temp"] = temp.temperature;
 	
